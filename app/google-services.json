@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "571778652924",
+    "firebase_url": "https://srm-pharmacy-a21dc.firebaseio.com",
+    "project_id": "srm-pharmacy-a21dc",
+    "storage_bucket": "srm-pharmacy-a21dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571778652924:android:7509b4db3fe6c6ba77d579",
+        "android_client_info": {
+          "package_name": "com.divij.srmpharmacy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571778652924-tvhrtp497radn4urt1dleqrrlmce1pog.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.divij.srmpharmacy",
+            "certificate_hash": "06117d88925ae26285857901beaf80b7cf691868"
+          }
+        },
+        {
+          "client_id": "571778652924-01fne2fer8pakko8vucjre05j4a33912.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1c0NprxmP2PAEX1k6M7PeqLfwO4UrgB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571778652924-01fne2fer8pakko8vucjre05j4a33912.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
