@@ -1,2 +1,0 @@
-# SRMPharmacy
-Official_Work
