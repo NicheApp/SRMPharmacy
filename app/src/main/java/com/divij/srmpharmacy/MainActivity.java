@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -36,11 +37,25 @@ public class MainActivity extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i , long l) {
-                String Templistview;
-                Templistview = mUsernames.toString();
+
                 Intent intent = new Intent (MainActivity.this,secondactivity.class);
-                    intent.putExtra("Listviewclickvalue",Templistview);
-                    startActivity(intent);
+                startActivity(intent);
+                mListView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        String selected = mUsernames.get(i).toString();
+                        Intent intent = new Intent (MainActivity.this,secondactivity.class);
+                        intent.putExtra("Listviewclickvalue",selected);
+
+                        Log.e("Clicked:",""+selected);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
             }
         });
 

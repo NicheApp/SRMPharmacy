@@ -33,15 +33,16 @@ public class secondactivity extends AppCompatActivity {
         Heading = findViewById(R.id.Heading);
         Name=findViewById(R.id.Name);
         description=findViewById(R.id.Description);
-        Benefits=findViewById(R.id.Benefits);
-        mref=new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users/drug");
+        //Benefits=findViewById(R.id.Benefits);
+        mref=new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users/Aciteratin");
         imageView3 = findViewById(R.id.imageView3);
         imageView4=findViewById(R.id.imageView4);
         imageView5=findViewById(R.id.imageView5);
         imageView6=findViewById(R.id.imageView6);
 
-        String tempholder=getIntent().getStringExtra("Listviewclickvalue");
-        Name.setText(tempholder);
+        String selected =getIntent().getStringExtra("Listviewclickvalue");
+
+        Name.setText(selected);
         mref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
