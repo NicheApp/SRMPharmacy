@@ -33,30 +33,14 @@ public class MainActivity extends AppCompatActivity {
         mListView = (ListView) findViewById(R.id.listview);
         final ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mUsernames);
         mListView.setAdapter(arrayAdapter);
-
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i , long l) {
-
-                Intent intent = new Intent (MainActivity.this,secondactivity.class);
-                startActivity(intent);
-                mListView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        String selected = mUsernames.get(i).toString();
-                        Intent intent = new Intent (MainActivity.this,secondactivity.class);
-                        intent.putExtra("Listviewclickvalue",selected);
-
-                        Log.e("Clicked:",""+selected);
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
-
-            }
+                    String val = mUsernames.get(i).toString();
+                    Intent intent = new Intent (MainActivity.this,secondactivity.class).putExtra("Listviewclickvalue",val);
+                    Log.e("Clicked:",""+val);
+                    startActivity(intent);
+                }
         });
 
         mref.addChildEventListener(new ChildEventListener() {
