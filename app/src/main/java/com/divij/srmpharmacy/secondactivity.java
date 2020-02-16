@@ -1,5 +1,6 @@
 package com.divij.srmpharmacy;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -14,6 +15,9 @@ import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,74 +38,26 @@ public class secondactivity extends AppCompatActivity {
         Name=findViewById(R.id.Name);
         description=findViewById(R.id.Description);
         //Benefits=findViewById(R.id.Benefits);
-        mref=new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users/Aciteratin");
-        imageView3 = findViewById(R.id.imageView3);
-        imageView4=findViewById(R.id.imageView4);
-        imageView5=findViewById(R.id.imageView5);
-        imageView6=findViewById(R.id.imageView6);
+        mref=new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users");
+//        imageView3 = findViewById(R.id.imageView3);
+//        imageView4=findViewById(R.id.imageView4);
+//        imageView5=findViewById(R.id.imageView5);
+//        imageView6=findViewById(R.id.imageView6);
 
-        String selected =getIntent().getStringExtra("Listviewclickvalue");
+        final String selected =getIntent().getStringExtra("Listviewclickvalue");
 
         Name.setText(selected);
-        mref.addChildEventListener(new ChildEventListener() {
+        ValueEventListener selectedListener = new ValueEventListener() {
             @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-
-                mref.addChildEventListener(new ChildEventListener() {
-                    @Override
-                    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                        final String value = (String) dataSnapshot.getValue();
-
-
-
-                    }
-
-                    @Override
-                    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-                    }
-
-                    @Override
-                    public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-                    }
-
-                    @Override
-                    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-                    }
-
-                    @Override
-                    public void onCancelled(FirebaseError firebaseError) {
-
-                    }
-                });
-
-
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                description.setText(dataSnapshot.child(selected.toString()).child("Food_Avoided").getValue().toString());
             }
 
             @Override
             public void onCancelled(FirebaseError firebaseError) {
 
             }
-        });
-
-
-
+        };
+        mref.addListenerForSingleValueEvent(selectedListener);
     }
 }
