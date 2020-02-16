@@ -20,27 +20,30 @@ import com.firebase.client.FirebaseError;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-     private SearchView mySearchView;
-     private Firebase mref;
-     private ListView mListView;
-     private ArrayList<String> mUsernames = new ArrayList<>();
+    private SearchView mySearchView;
+    private Firebase mref;
+    private ListView mListView;
+    private ArrayList<String> mUsernames = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mySearchView = (SearchView)findViewById(R.id.searchView);
-        mref=new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users");
+        mySearchView = (SearchView) findViewById(R.id.searchView);
+        mref = new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users");
         mListView = (ListView) findViewById(R.id.listview);
-        final ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mUsernames);
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
+                mUsernames);
         mListView.setAdapter(arrayAdapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i , long l) {
-                    String val = mUsernames.get(i).toString();
-                    Intent intent = new Intent (MainActivity.this,secondactivity.class).putExtra("Listviewclickvalue",val);
-                    Log.e("Clicked:",""+val);
-                    startActivity(intent);
-                }
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String selected = mUsernames.get(i).toString();
+                Intent intent = new Intent(MainActivity.this, secondactivity.class).putExtra("Listviewclickvalue",
+                        selected);
+                Log.e("Clicked:", "" + selected);
+                startActivity(intent);
+            }
         });
 
         mref.addChildEventListener(new ChildEventListener() {
@@ -51,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
                 mUsernames.add(value);
                 arrayAdapter.notifyDataSetChanged();
-
 
             }
 
