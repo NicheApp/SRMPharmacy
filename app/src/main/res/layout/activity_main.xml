@@ -7,7 +7,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+    android:background="@color/blue"
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".MainActivity">
@@ -46,14 +46,15 @@
 
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:background="@android:color/background_light"
+        android:backgroundTint="@android:color/background_light"
         android:iconifiedByDefault="false"
-        android:queryHint="Search Here"
+        android:queryHint="Search Here..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -68,7 +69,7 @@
 
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:background="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
