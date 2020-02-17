@@ -5,8 +5,8 @@
     android:id="@+id/constraintlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
-    android:backgroundTint="@color/blue"
+    android:background="@color/colorPrimary"
+    android:backgroundTint="@color/colorPrimary"
     tools:context=".secondactivity"
     tools:layout_editor_absoluteY="81dp">
 
