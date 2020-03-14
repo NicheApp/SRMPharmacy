@@ -1,12 +1,17 @@
 package com.divij.srmpharmacy;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -19,9 +24,11 @@ import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
     private SearchView mySearchView;
     private Firebase mref;
     private ListView mListView;
@@ -31,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
         mySearchView = (SearchView) findViewById(R.id.searchView);
         mref = new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users");
         mListView = (ListView) findViewById(R.id.listview);
@@ -97,5 +108,23 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+       MenuInflater inflater = getMenuInflater();
+       inflater.inflate(R.menu.bottom_navigation_menu,menu);
+       return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.navigation_reference:
+                Intent intent = new Intent(MainActivity.this,Reference.class);
+                startActivity(intent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
