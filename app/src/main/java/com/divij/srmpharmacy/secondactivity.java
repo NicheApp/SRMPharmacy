@@ -3,7 +3,9 @@ package com.divij.srmpharmacy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,11 +26,11 @@ public class secondactivity extends AppCompatActivity {
     TextView interaction;
     TextView time;
     TextView describe;
-    TextView interact;
+    TextView interact,foodavoid,foodbenefit;
     ImageView img_benefit_1;
     ImageView img_avoid_1;
-    ImageView img_benefit_2;
-    private String link;
+   // ImageView img_benefit_2;
+    public static String link1,link2;
     private Firebase mref;
    // private FirebaseDatabase fdata=FirebaseDatabase.getInstance();
 
@@ -49,9 +51,11 @@ public class secondactivity extends AppCompatActivity {
         time = findViewById(R.id.Time);
         describe=findViewById(R.id.describe);
         interact=findViewById(R.id.interact);
-        img_benefit_1=findViewById(R.id.imageView3);
+        img_benefit_1=findViewById(R.id.image_benefit_1);
         img_avoid_1=findViewById(R.id.img_avoid_1);
-        img_benefit_2=findViewById(R.id.imageView4);
+        foodavoid=findViewById(R.id.foodavoid);
+        foodbenefit=findViewById(R.id.foodtaken);
+        //img_benefit_2=findViewById(R.id.imageView4);
 
 
 
@@ -70,9 +74,14 @@ public class secondactivity extends AppCompatActivity {
                 time_taken.setText(dataSnapshot.child(selected.toString()).child("When should take").getValue().toString());
                 interaction.setText(dataSnapshot.child(selected.toString()).child("Interacting with").getValue().toString());
                 description.setText(dataSnapshot.child(selected.toString()).child("Description of drug-food interaction effect").getValue().toString());
-                link=dataSnapshot.child(selected.toString()).child("Food_Avoided").getValue().toString();
-               // String link = databaseReference1.getKey();
-                Picasso.get().load(link).into(img_avoid_1);
+                link1=dataSnapshot.child(selected.toString()).child("Food to avoid picture").getValue().toString();
+                link2=dataSnapshot.child(selected.toString()).child("Food to take picture").getValue().toString();
+                foodavoid.setText(dataSnapshot.child(selected.toString()).child("Food to avoid").getValue().toString());
+                foodbenefit.setText(dataSnapshot.child(selected.toString()).child("Food to take").getValue().toString());
+
+                // String link = databaseReference1.getKey();
+                  Picasso.get().load(link1).into(img_avoid_1);
+                  Picasso.get().load(link2).into(img_benefit_1);
                 // DatabaseReference databaseReference=fdata.getReference().child("Users").child("A");
             }
 
@@ -82,5 +91,18 @@ public class secondactivity extends AppCompatActivity {
             }
         };
         mref.addListenerForSingleValueEvent(selectedListener);
+    }
+
+    public void enlarge(View view) {
+        Intent intent = new Intent(secondactivity.this , Enlarge.class );
+        //intent.putExtra("link1",link1);
+        startActivity(intent);
+
+    }
+
+    public void enlarge2(View view) {
+        Intent intent = new Intent(secondactivity.this , Enlarge2.class );
+        //intent.putExtra("link1",link1);
+        startActivity(intent);
     }
 }

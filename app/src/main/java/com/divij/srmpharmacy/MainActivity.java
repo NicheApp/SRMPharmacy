@@ -27,6 +27,8 @@ import com.firebase.client.FirebaseError;
 
 import java.util.ArrayList;
 
+import static com.firebase.client.Firebase.*;
+
 public class MainActivity extends AppCompatActivity {
 
     private SearchView mySearchView;
@@ -38,10 +40,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-
+        Firebase.setAndroidContext(this);
         mySearchView = (SearchView) findViewById(R.id.searchView);
         mref = new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users");
         mListView = (ListView) findViewById(R.id.listview);
@@ -112,9 +111,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-       MenuInflater inflater = getMenuInflater();
-       inflater.inflate(R.menu.bottom_navigation_menu,menu);
-       return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.bottom_navigation_menu,menu);
+        return true;
     }
 
     @Override
