@@ -1,4 +1,91 @@
 <resources>
     <string name="app_name">SRM Pharmacy</string>
+    <string name ="reference1">
+1.	US Food and Drug Administration. Avoid food-drug interactions: a guide from the National Consumers League and US Food and Drug Administration.
+ </string>
+    <string name ="reference2">
+    2.	Ismail MY, Yaheya M. Drug-food interactions and role of pharmacist. Asian journal of pharmaceutical and clinical research. 2009 Oct;2(4):1-0.
+    </string>
+    <string name ="reference3">
+3.	Frankel EH, McCabe BJ, Wolfe JJ, editors. Handbook of Food-Drug Interactions. CRC Press; 2003.
+ </string>
+    <string name ="reference4">
+4.	McCabe-Sellers B, Frankel EH, Wolfe JJ. Pharmacy: Basic Concepts. InHandbook of Food-Drug Interactions 2003 Apr 29 (pp. 15-28). CRC Press.
+ </string>
+    <string name ="reference5">
+5.	Boullata JI, Armenti VT, editors. Handbook of drug\'nutrient interactions. Springer Science and Business Media 2004 Apr 17.
+ </string>
+    <string name ="reference6">
+6.	Bailey DG, Spence JD, Munoz C, Arnold JM. Interaction of citrus juices with felodipine and nifedipine. The Lancet. 1991 Feb 2;337(8736):268-9.
+ </string>
+    <string name ="reference7">
+7.	Carol M. Bareuther, RD. Dangerous Food-Drug Interactions. Today’s Geriatric Medicine; 2008:1(4).
+ </string>
+    <string name ="reference8">
+8.	Chu SY, Park Y, Locke C, Wilson DS, Cavanaugh JC. Drug‐food interaction potential of clarithromycin, a new macrolide antimicrobial. The Journal of Clinical Pharmacology. 1992 Jan;32(1):32-6.
+ </string>
+    <string name ="reference9">
+9.	Cusinato DA, Martinez EZ, Cintra MT, Filgueira GC, Berretta AA, Lanchote VL, Coelho EB. Evaluation of potential herbal-drug interactions of a standardized propolis extract (EPP-AF®) using an in vivo cocktail approach. Journal of ethnopharmacology. 2019 Dec 5;245:112174
+ </string>
+    <string name ="reference10">
+10.	Celli GB, Liu Y, Dadmohammadi Y, Tiwari R, Raghupathi K, Mutilangi W, Abbaspourrad A. Instantaneous interaction of mucin with pectin-and carrageenan-coated nanoemulsions. Food chemistry. 2020 Mar 30;309:125795.
+ </string>
+    <string name ="reference11">
+11.	Jensen K, Ni Y, Panagiotou G, Kouskoumvekaki I. Developing a molecular roadmap of drug-food interactions. PLoS Comput Biol. 2015 Feb 10;11(2):e1004048.
+ </string>
+    <string name ="reference12">
+12.	Yamazaki A, Kumagai Y, Fujita T, Hasunuma T, Yokota S, Maeda M, Otani Y, Majima M. Different effects of light food on pharmacokinetics and pharmacodynamics of three benzodiazepines, quazepam, nitrazepam and diazepam. Journal of clinical pharmacy and therapeutics. 2007 Feb;32(1):31-9.
+ </string>
+    <string name ="reference13">
+        13.	Huang SM, Lesko LJ. Drug‐Drug, Drug—Dietary Supplement, and Drug—Citrus Fruit and Other Food Interactions: What Have We Learned?. The Journal of Clinical Pharmacology. 2004 Jun;44(6):559-69.
+ </string>
+    <string name ="reference14">
+14.	Bushra R, Aslam N, Khan AY. Food-drug interactions. Oman medical journal. 2011 Mar;26(2):77.
+ </string>
+    <string name ="reference15">
+15.	Bland SE, Vermeulen L. Drug-food interactions. Journal of the Pharmacy Society of Wisconsin. 1998 Nov:28-35.
+ </string>
+    <string name ="reference16">
+16.	Kearney BP, Sayre JR, Flaherty JF, Chen SS, Kaul S, Cheng AK. Drug‐drug and drug‐food interactions between tenofovir disoproxil fumarate and didanosine. The Journal of Clinical Pharmacology. 2005 Dec;45(12):1360-7.
+ </string>
+    <string name ="reference17">
+17.	Ismail MY, Yaheya M. Drug-food interactions and role of pharmacist. Asian journal of pharmaceutical and clinical research. 2009 Oct;2(4):1-0.
+    </string>
+    <string name ="reference18">
+18.	Welling PG. How food and fluid affect drug absorption: results of initial studies. Postgraduate Medicine. 1977 Jul 1;62(1):73-82.
+ </string>
+    <string name ="reference19">
+19.	Schmidt LE, Dalhoff K. Food-drug interactions. Drugs. 2002 Jul 1;62(10):1481-502.
+ </string>
+    <string name ="reference20">
+20.	Masuko K, Tohma S, Matsui T. Potential food‐drug interactions in patients with rheumatoid arthritis. International journal of rheumatic diseases. 2013 Apr;16(2):122-8.
+ </string>
+    <string name ="reference21">
+21.	Dahan A, Altman H. Food–drug interaction: grapefruit juice augments drug bioavailability—mechanism, extent and relevance. European journal of clinical nutrition. 2004 Jan;58(1):1-9.
+ </string>
+    <string name ="reference22">
+22.	Bailey DG. Fruit juice inhibition of uptake transport: a new type of food–drug interaction. British journal of clinical pharmacology. 2010 Nov;70(5):645-55.
+ </string>
+    <string name ="reference23">
+23.	Werba JP, Misaka S, Giroli MG, Shimomura K, Amato M, Simonelli N, Vigo L, Tremoli E. Update of green tea interactions with cardiovascular drugs and putative mechanisms. journal of food and drug analysis. 2018 Apr 1;26(2):S72-7
+ </string>
+    <string name ="reference24">
+24.	Self TH, Chrisman CR, Baciewicz AM, Bronze MS. Isoniazid drug and food interactions. The American journal of the medical sciences. 1999 May 1;317(5):304-11.
+ </string>
+    <string name ="reference25">
+25.	Aman SF, Hassan F, Naqvi BS, Hasan SM. Studies of food drug interactions. Pakistan journal of pharmaceutical sciences. 2010 Jul 1;23(3).
+    </string>
+    <string name ="reference26">
+    26.	Sansone R, Ottaviani JI, Rodriguez-Mateos A, Heinen Y, Noske D, Spencer JP, Crozier A, Merx MW, Kelm M, Schroeter H, Heiss C. Methylxanthines enhance the effects of cocoa flavanols on cardiovascular function: randomized, double-masked controlled studies. The American journal of clinical nutrition. 2017 Feb 1;105(2):352-60.
+    </string>
+    <string name ="reference27">
+27.	Nongonierma AB, FitzGerald RJ. Dipeptidyl peptidase IV inhibitory properties of a whey protein hydrolysate: Influence of fractionation, stability to simulated gastrointestinal digestion and food–drug interaction. International Dairy Journal. 2013 Sep 1;32(1):33-9.
+    </string>
+    <string name ="reference28">
+        28.	Holbrook AM, Pereira JA, Labiris R, McDonald H, Douketis JD, Crowther M, Wells PS. Systematic overview of warfarin and its drug and food interactions. Archives of internal medicine. 2005 May 23;165(10):1095-106.
+ </string>
+
+
+
 
 </resources>

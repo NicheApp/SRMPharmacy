@@ -8,8 +8,8 @@
     <application
         android:name=".srmpharmacy"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="SRM College Of Pharmacy"
+        android:icon="@drawable/pharmacy_logo"
+        android:label="SRM College of Pharmacy"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"

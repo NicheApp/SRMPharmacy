@@ -1,17 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reference">
+    tools:context=".Reference"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="412dp"
-        android:layout_height="603dp"
-        android:text="REFERENCES"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+              <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        android:id="@+id/heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="REFERENCES"
+                        android:textSize="30sp"
+                        android:padding="10dp"
+                        android:textColor="#009688"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                         />
+
+                  <androidx.cardview.widget.CardView
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:elevation="30dp"
+                      app:cardCornerRadius="20dp"
+                      android:padding="20dp">
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical"
+                          android:padding="10dp">
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:padding="10dp"
+                              android:id="@+id/reference1"
+                              android:text="@string/reference1">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference2"
+                              android:padding="10dp"
+                              android:text="@string/reference2">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference3"
+                              android:padding="10dp"
+                              android:text="@string/reference3">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference4"
+                              android:padding="10dp"
+                              android:text="@string/reference4">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference5"
+                              android:padding="10dp"
+                              android:text="@string/reference5">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference6"
+                              android:padding="10dp"
+                              android:text="@string/reference6">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference7"
+                              android:padding="10dp"
+                              android:text="@string/reference7">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference8"
+                              android:padding="10dp"
+                              android:text="@string/reference8">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference9"
+                              android:padding="10dp"
+                              android:text="@string/reference9">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference10"
+                              android:padding="10dp"
+                              android:text="@string/reference10">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference11"
+                              android:padding="10dp"
+                              android:text="@string/reference11">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference12"
+                              android:padding="10dp"
+                              android:text="@string/reference12">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference13"
+                              android:padding="10dp"
+                              android:text="@string/reference13">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference14"
+                              android:padding="10dp"
+                              android:text="@string/reference14">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference15"
+                              android:padding="10dp"
+                              android:text="@string/reference15">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference16"
+                              android:padding="10dp"
+                              android:text="@string/reference16">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference17"
+                              android:padding="10dp"
+                              android:text="@string/reference18">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference19"
+                              android:padding="10dp"
+                              android:text="@string/reference19">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference20"
+                              android:padding="10dp"
+                              android:text="@string/reference20">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference21"
+                              android:padding="10dp"
+                              android:text="@string/reference21">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference22"
+                              android:padding="10dp"
+                              android:text="@string/reference22">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference23"
+                              android:padding="10dp"
+                              android:text="@string/reference23">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference24"
+                              android:padding="10dp"
+                              android:text="@string/reference24">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference25"
+                              android:padding="10dp"
+                              android:text="@string/reference25">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference26"
+                              android:padding="10dp"
+                              android:text="@string/reference26">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference27"
+                              android:padding="10dp"
+                              android:text="@string/reference27">
+
+                          </TextView>
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/reference28"
+                              android:padding="10dp"
+                              android:text="@string/reference28">
+
+                          </TextView>
+                      </LinearLayout>
+                  </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

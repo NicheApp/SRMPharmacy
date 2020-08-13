@@ -3,9 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/Search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/images"
+        android:icon="@drawable/ic_baseline_photo_24"
+        android:title="Images" />
+    <item
         android:id="@+id/navigation_reference"
-        android:icon="@drawable/baseline_storefront_black_24dp"
+        android:icon="@drawable/ic_baseline_receipt_24"
         android:title="References" />
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/baseline_info_black_24dp"
+        android:title="About Us" />
 
 
 
