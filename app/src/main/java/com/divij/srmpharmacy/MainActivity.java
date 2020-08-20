@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
@@ -23,6 +24,7 @@ import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 import java.util.ArrayList;
@@ -35,11 +37,43 @@ public class MainActivity extends AppCompatActivity {
     private Firebase mref;
     private ListView mListView;
     private ArrayList<String> mUsernames = new ArrayList<>();*/
-
+BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bottomNavigationView=findViewById(R.id.btm_nav);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.Search :
+                        getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container,new SearchFragment()).commit();
+
+                        return true;
+
+                    case R.id.images:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container,new Images()).commit();
+
+                        return true;
+
+                    case R.id.navigation_reference:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container,new Reference()).commit();
+                        return true;
+                    case R.id.about:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container,new AboutUs()).commit();
+                        return true;
+                    default:
+                        return false;
+
+                }
+
+            }
+
+
+        });
+
     }
 }
 //       Firebase.setAndroidContext(this);

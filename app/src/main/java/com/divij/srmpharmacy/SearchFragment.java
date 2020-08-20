@@ -41,13 +41,15 @@ public class SearchFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_search,container,false);
-
+        View v= inflater.inflate(R.layout.fragment_search,container,false);
         Firebase.setAndroidContext(getContext());
-        mref = new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users");
-        mySearchView = (SearchView) mySearchView.findViewById(R.id.searchView);
 
-        mListView = (ListView) mListView.findViewById(R.id.listview);
+
+        mref = new Firebase("https://srm-pharmacy-a21dc.firebaseio.com/Users");
+
+        mySearchView = v.findViewById(R.id.searchView);
+
+        mListView = v.findViewById(R.id.listview);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, mUsernames);
         mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -110,7 +112,7 @@ public class SearchFragment extends Fragment {
 
             }
         });
-
+return  v;
     }
 
 

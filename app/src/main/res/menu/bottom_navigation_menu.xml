@@ -17,7 +17,7 @@
         android:title="References" />
     <item
         android:id="@+id/about"
-        android:icon="@drawable/baseline_info_black_24dp"
+        android:icon="@drawable/ic_baseline_search_24"
         android:title="About Us" />
 
 

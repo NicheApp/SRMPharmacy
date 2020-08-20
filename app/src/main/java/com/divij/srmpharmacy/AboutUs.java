@@ -13,6 +13,8 @@ public class AboutUs extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.aboutus, container, false);
+        View v= inflater.inflate(R.layout.aboutus, container, false);
+
+        return v;
     }
 }
